@@ -1,12 +1,13 @@
+---
 name: Bug Report
 description: File a bug report
-title: "[Bug]: "
+title: "A Brief Descriptive Title Here"
 labels: ["bug", "triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to fill out this bug report. Please leave as much detail as possible.
   - type: dropdown
     id: version-project
     attributes:
@@ -35,12 +36,21 @@ body:
     validations:
       required: true
   - type: textarea
-    id: what-happened
+    id: description-details
     attributes:
-      label: What happened?
+      label: Detailed Description:
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
       value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: description-steps
+    attributes:
+      label: Steps to Reproduce:
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "1. Open terminal\n2. Type a command..."
     validations:
       required: true
   - type: textarea
