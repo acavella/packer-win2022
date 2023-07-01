@@ -54,7 +54,10 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      description: >- 
+        This project has a Code of Conduct that all participants are expected
+        to understand and follow.
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: I have read and agree to the project's Code of Conduct.
           required: true
+          
