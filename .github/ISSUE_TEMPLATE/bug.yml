@@ -7,14 +7,33 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+  - type: dropdown
+    id: version-project
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Project Version
+      description: What version of the project are you using?
+      options:
+        - main (pre-release)
+        - 1.0.1 (latest)
+        - 1.0.0
     validations:
-      required: false
+      required: true
+  - type: input
+    id: version-vsphere
+    attributes:
+      label: VMware vSphere
+      description: Please provide the VMware vSphere version.
+      placeholder: 7.0.3d
+    validations:
+      required: true
+  - type: input
+    id: version-packer
+    attributes:
+      label: HashiCorp Packer
+      description: Please provide the HashiCorp Packer version.
+      placeholder: 1.9.1
+    validations:
+      required: true
   - type: textarea
     id: what-happened
     attributes:
@@ -24,26 +43,6 @@ body:
       value: "A bug happened!"
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
     id: logs
     attributes:
