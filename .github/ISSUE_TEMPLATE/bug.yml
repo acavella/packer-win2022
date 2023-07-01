@@ -8,6 +8,16 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report. Please leave as much detail as possible.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: >- 
+        This project has a Code of Conduct that all participants are expected
+        to understand and follow.
+      options:
+        - label: I have read and agree to the project's Code of Conduct.
+          required: true
   - type: dropdown
     id: version-project
     attributes:
@@ -49,15 +59,4 @@ body:
     attributes:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: >- 
-        This project has a Code of Conduct that all participants are expected
-        to understand and follow.
-      options:
-        - label: I have read and agree to the project's Code of Conduct.
-          required: true
-          
+      render: shell        
